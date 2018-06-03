@@ -41,3 +41,9 @@ input = [0.0, (1/sqrt(2)), 1.0, (1/sqrt(2)), 0, -(1/sqrt(2)), -1, -(1/sqrt(2))]
 output = IDFT(input) 
 for wave in output:
 	print(wave.magnitude(), wave.phase())
+
+input = [i/100.0 for i in range(100)]
+print(input)
+output = IDFT(input) 
+for wave in output:
+	print(wave.magnitude(), wave.phase())
