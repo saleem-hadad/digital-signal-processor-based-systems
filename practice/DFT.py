@@ -26,7 +26,12 @@ output = IDFT(input)
 for wave in output:
 	print(wave.real, wave.imaginary)
 
-input = [0.0, 1.0, 2.0, 3.0, 4.0, 5.0] # -> (15 + 0j) (−3 + 5.196153𝑗) (−3 + 1.732051𝑗) (−3 +0j)
+input = [0.0, 1.0, 2.0, 3.0, 4.0, 5.0] 
+output = IDFT(input) 
+for wave in output:
+	print(wave.real, wave.imaginary)
+
+input = [0.0, (1/sqrt(2)), 1.0, (1/sqrt(2)), 0, -(1/sqrt(2)), -1, -(1/sqrt(2))]
 output = IDFT(input) 
 for wave in output:
 	print(wave.real, wave.imaginary)
