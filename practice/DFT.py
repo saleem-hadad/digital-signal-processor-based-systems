@@ -5,6 +5,12 @@ class Complex:
 		self.real = real
 		self.imaginary = imaginary
 
+	def magnitude(self):
+		return sqrt(self.real ** 2 + self.imaginary ** 2)
+
+	def phase(self):
+		return atan2(self.imaginary, self.real)
+
 def IDFT(input):
 	n = len(input)
 	k = n / 2 + 1
@@ -34,4 +40,4 @@ for wave in output:
 input = [0.0, (1/sqrt(2)), 1.0, (1/sqrt(2)), 0, -(1/sqrt(2)), -1, -(1/sqrt(2))]
 output = IDFT(input) 
 for wave in output:
-	print(wave.real, wave.imaginary)
+	print(wave.magnitude(), wave.phase())
